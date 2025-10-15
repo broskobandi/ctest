@@ -27,7 +27,7 @@ SOFTWARE.
  * \details This file contains the definitions of the public functions 
  * and the global variables for the test library. */
 
-#include "../include/ctest.h"
+#include "ctest.h"
 #include <stddef.h> /* For size_t */
 #include <stdio.h>
 

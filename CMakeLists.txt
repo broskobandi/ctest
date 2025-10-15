@@ -23,6 +23,8 @@ add_executable(example EXCLUDE_FROM_ALL ${EXAMPLE_MAIN})
 
 set_target_properties(${LIB_ST} PROPERTIES OUTPUT_NAME ${PROJECT_NAME})
 target_link_libraries(example PRIVATE ${PROJECT_NAME})
+target_include_directories(${LIB_SH} PRIVATE ${INC_DIR})
+target_include_directories(${LIB_ST} PRIVATE ${INC_DIR})
 install(TARGETS ${LIB_SH} LIBRARY DESTINATION lib)
 install(TARGETS ${LIB_ST} ARCHIVE DESTINATION lib)
 install(FILES ${INC} DESTINATION include)
