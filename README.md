@@ -6,19 +6,17 @@ The goal of the project is to provide a simple test utility for C projects.
 The CTEST() macro automates the process of setting the global variables.
 ### Color coded results
 Easily distinguishable result values are printed at the end of the test program's run.
-## Dependencies
-### For compilation
-- gcc
+## Prerequisites
+- cmake (for building the library)
 ## Installation
 ```bash
-git clone https://gitlab.com/broskobandi/test.git &&
+git clone https://github.com/broskobandi/ctest.git &&
+cd ctest &&
+mkdir build &&
+cd build &&
+cmake .. &&
 make &&
 sudo make install
-```
-## Uninstallation
-```bash
-cd test &&
-sudo make uninstall
 ```
 ## Usage
 ```c
@@ -47,11 +45,4 @@ int main(void) {
 [1 TESTS PASSED]
 [1 TESTS FAILED]
  * */
-```
-Compile the program using this library with -L/usr/local/lib -lctest flags.
-## Documentation
-Make sure doxygen is installed.
-```bash
-cd test &&
-make doc
 ```
