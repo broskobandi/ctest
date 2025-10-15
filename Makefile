@@ -31,7 +31,6 @@ all: $(LIB_A) $(LIB_SO)
 example: CC := clang
 example: LDFLAGS := -L/usr/local/lib -l$(PROJECT)
 example: $(EXAMPLE_EXE)
-	./$<
 
 install:
 	cp $(LIB_A) $(LIB_INSTALL_DIR)

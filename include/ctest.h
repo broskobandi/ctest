@@ -35,6 +35,10 @@ SOFTWARE.
 #define CTEST(expr)\
 	ctest((expr), #expr, __FILE__, __LINE__)
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /** Evaluates if 'expr' is true or false and
  * updates the corresponding internal global varriables.
  * \param expr The expression to be evaluated. */
@@ -42,5 +46,9 @@ void ctest(bool expr, const char *name, const char *file, int line);
 
 /** Prints the test results. */
 void ctest_print_results();
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif
