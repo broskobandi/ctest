@@ -3,7 +3,7 @@
 The goal of the project is to provide a simple test utility for C projects.
 ## Features
 ### Macro helper for ease of use
-The TEST() macro automates the process of setting the global variables.
+The CTEST() macro automates the process of setting the global variables.
 ### Color coded results
 Easily distinguishable result values are printed at the end of the test program's run.
 ## Dependencies
@@ -23,7 +23,7 @@ sudo make uninstall
 ## Usage
 ```c
 /* Include the library. */
-#include <test.h>
+#include <ctest.h>
 
 /* A function to test. */
 int add_numbers(int a, int b) {
@@ -32,11 +32,11 @@ int add_numbers(int a, int b) {
 
 int main(void) {
 	/* Test for different cases. */
-	TEST(add_numbers(1, 2) == 3);
-	TEST(add_numbers(1, 3) == 3);
+	CTEST(add_numbers(1, 2) == 3);
+	CTEST(add_numbers(1, 3) == 3);
 
 	/* Print the results. */
-	print_results();
+	ctest_print_results();
 	return 0;
 }
 
